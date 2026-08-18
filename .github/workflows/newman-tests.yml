@@ -24,10 +24,11 @@ jobs:
           npm install -g newman
           npm install -g newman-reporter-htmlextra
 
-      - name: Run API Tests
+            - name: Run API Tests
         run: |
-          newman run "DummyJSON - Full Test Suite.postman_collection.json" -e "DummyJSON - Test.postman_environment.json" -r cli,htmlextra --reporter-htmlextra-export "newman-report.html"
+          newman run "DummyJSON - Full Test Suite.postman_collection.json" -e "DummyJSON - Test.postman_environment.json" -d "login_users.json" -r cli,htmlextra --reporter-htmlextra-export "newman-report.html"
 
+Kaydet.
       - name: Upload HTML Report
         if: always()
         uses: actions/upload-artifact@v4

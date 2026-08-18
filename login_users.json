@@ -1,0 +1,7 @@
+[
+  { "username": "emilys", "password": "emilyspass", "expectedStatus": 200 },
+  { "username": "michaelw", "password": "michaelwpass", "expectedStatus": 200 },
+  { "username": "sophiab", "password": "sophiabpass", "expectedStatus": 200 },
+  { "username": "emilys", "password": "yanlissifre", "expectedStatus": 400 },
+  { "username": "olmayankullanici", "password": "herhangi", "expectedStatus": 400 }
+]
