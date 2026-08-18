@@ -418,53 +418,6 @@
       "response": []
     },
     {
-      "name": "Login (Data-Driven)",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "exec": [
-              "pm.test(\"Status code matches expected value from data file\", function () {\r",
-              "    var expected = parseInt(pm.iterationData.get(\"expectedStatus\"));\r",
-              "    pm.expect(pm.response.code).to.eql(expected);\r",
-              "});\r",
-              "\r",
-              "pm.test(\"Response body is valid JSON\", function () {\r",
-              "    pm.response.to.have.jsonBody();\r",
-              "});"
-            ],
-            "type": "text/javascript",
-            "packages": {},
-            "requests": {}
-          }
-        }
-      ],
-      "request": {
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n  \"username\": \"{{username}}\",\r\n  \"password\": \"{{password}}\"\r\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "{{base_url}}/auth/login",
-          "host": [
-            "{{base_url}}"
-          ],
-          "path": [
-            "auth",
-            "login"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
       "name": "All Products - Response Time",
       "event": [
         {
